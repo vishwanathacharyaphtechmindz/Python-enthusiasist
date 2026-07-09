@@ -1,67 +1,43 @@
-#Exception 
-#Events that affect the excution of our programm
+# I pattern
 
-#errors
+# for i in range(1,6):
+#     for j in range(1,6):
+#         if i == 1 or i == 5 or j == 3:
+#             print("*" ,end="")
+#         else:
+#             print(" " ,end="")
+#     print()
 
-# try:
-#     a = 5
-#     b = 0
-#     print(a/b)
-# except Exception as e:
-#     print("You have an error ",e)
-# print("vijay")
+ # Holo pattern
 
-# try:
-#     a = int(input("enter : -"))
-#     b = 5
-#     print(a/b)
-# except ZeroDivisionError:
-#     print("you cannot divide a number with zero")
-# except ValueError:
-#     print("check values")
-# except TypeError:
-#     print("check types")
-# finally:
-#     print("This will always excute")
-
-# class MyError(Exception):
-#     pass
-# name = "das"
-# if name == "das":
-#     raise MyError("Name should not be das")
-# a = 5
-# del(a)
-# print(a)
-
-#File Handling
+# for i in range(1,6):
+#     for j in range(1,6):
+#         if j == 1 or j == 5 or i == 1 or i ==5 :
+#             print("*" ,end="") 
+#         else:
+#             print(" " ,end="")
+#     print()
 
 
-# file1 = open("data.txt","r")
-# print(file1.read())
-# file1.close()
+#S Pattern
 
-# file2 = open("myfile.txt", "a")
-# file2.write("this month iis july!!!!!!!!!")
-# file2.close()
+# for i in range(7):
+#     for j in range(6):
+#         if ((i==0 or i==3 or i==6) and (j>0 and j<4 )) or (j==0 and (i>0 and i<3)) or (j==4 and (i>3 and i<6)):
+#             print("*",end=" ")
+#         else:
+#             print(" ",end=" ")
+#     print()
 
-# file3 = open("myfile.txt","a")
-# file3.write("\nVijay")
-# file3.close()
+#T Pattern
+for i in range(6):
+    for j in range(4):
+        if i==0 or 
+            print("*",end=" ")
+        else:
+            print("",end="")
+    print()    
+    
 
-# file5 = open("myfile.txt","a")
-# for i in range(1,10000):
-#     file5.write(f"\nVijay {i}")
-# file5.close()
 
-#OS
-
-import os
-os.mkdir("images")
-os.remove("data.txt")
-os.rename("myfile.txt","demo.txt")
-path = "C:\\Users\\sshab\\OneDrive\\Desktop\\june 2026"    
-if os.path.exists(path):
-    if os.path.isfile(path):
-        print("file exists")
-    elif os.path.isdir(path):
-        print("folder exists")
+        
