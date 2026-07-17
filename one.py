@@ -1,83 +1,65 @@
-# class Point:
-#     def __init__(self,x,y):
-#         self.x = x
-#         self.y = y
+#Decorators
 
-#     def reset(self):
-#         self.x,self.y = 0,0    
-#         self.move(0,0)    
-    
-#     def move(self,a,b):
-#          self.x = a
-#          self.y = b
-        
-#     def move(self):
-#         self.x = 8
-    
-#     def move(self):
-#         self.y = 7
+# def saymyname(fun):
+#     def wrapper():  #inner function 
+#         print("say my name")
+#         fun()
+#         print("you are right")
+#     return wrapper
+
+# @saymyname
+# def add():
+#     print("add 2 numbers")
+
+# @saymyname
+# def hello():
+#     print("Hello vijay")
+
+# hello()
+# add()
+
+#ARGUMENTS
+# def add(*args):
+#     return args()
+# print((1,2,3,4,5,6,7,8,9,0))
+
+# #KEYWORD ARGUMENTS
+# def add(**kargs):
+#     return kargs()
+# print(("fname:","vishwa","mname:","Acharya","lname:","P H"))
+
+# def fullname(*args,**kwargs):
+#     print(kwargs)
+# fullname(fname="vishwa",mname="Acharya",lname="P H")
 
 
-# p1 = Point(4,5)
-# print(p1.x,p1.y)
-# p1 = Point(0,0) 
-# print(p1.x,p1.y)
-# p1.move()
-# print(p1.x)
-# p1.move()
-# print(p1.y)
 
-#ABSTRACT METHOD
+# import time
+# print(time.time())
+# print(time.ctime(1784183944.0896819))
+# print(time.time())
+# start = time.time()
+# for i in range(1,11):
+#     print(i)
+#     time.sleep(1)
+# stop = time.time()
+# print("total time:",stop-start)
 
-from abc import ABC,abstractmethod
-class Animal(ABC):
-    def __init__(self):
-        pass
-    @abstractmethod
-    def makes_sound(self):
-        print("Animal makes sound")
-class Dog:
-    def __init(Animal):
-        pass
-    def makes_sound(self):
-        print("woff woff")
 
-d = Dog()
-d.makes_sound()  
+import time
 
-#ENCAPSULATION
-#ACCESS MODIFIER
-
-#1.public access modifier
-  
-class Student:
-    def __init__(self):
-        self.name = "vijay"
-
-s1 = Student()
-print(s1.name)  
-
-#2.protected access modifier
-
-class Student2:
-    def __init__(self):
-        self._age = 21
-
-s2 = Student2()
-print(s2._age)
-
-#3.private access modifier
-class Student3:
-    def __init__(self):
-        self.__marks = 95
-
-s3 = Student3()
-print(s3._Student3__marks)
-
-#code
-
-class Queue:
-    def
-
-    
-
+def totaltime(fun):
+    def inner(fun):
+        def wrapper(*args,**kwargs):
+            start = time.time()
+            fun(*args,**kwargs)
+            stop = time.time()
+            print(f"total time : {stop-start}")
+        return wrapper
+    return inner
+@totaltime(10)
+def myname(n):
+    for i in range(n):
+        print(i)
+        time.sleep(1)
+myname(5)
